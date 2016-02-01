@@ -19,4 +19,4 @@ Initialize repo:
 Compile:
 
     . build/envsetup.sh
-    brunch cm_l70pn-userdebug
+    brunch cm_l70pds-userdebug
