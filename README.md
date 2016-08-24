@@ -1,4 +1,4 @@
-CyanogenMod 12.1 device configuration for LG L Fino l70pn (D290n), semi-compatible with l70pds (D295)
+CyanogenMod 12.1 device configuration for LG L Fino l70pds (D295)
 
 
 How to build:
