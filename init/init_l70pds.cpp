@@ -36,11 +36,12 @@
 #include "log.h"
 #include "util.h"
 
-#include "init_msm.h"
+
 
 #define CHUNK 2048 /* read 2048 bytes at a time */
+#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
 
-int check_cmdline(char param[]) {
+int check_cmdline(const char param[]) {
 
     char buf[CHUNK];
     FILE *file;
@@ -67,15 +68,12 @@ int check_cmdline(char param[]) {
 }
 
  
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void vendor_load_properties()
 {
     char serial[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
 
-    UNUSED(msm_id);
-    UNUSED(msm_ver);
-    UNUSED(board_type);
 
     property_get("ro.boot.serialno", serial);
     if (strncmp(serial, "LGD290", 6) == 0) {
@@ -95,17 +93,17 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "l70pds");
         property_set("ro.product.model", "LG-D295");
         property_set("ro.build.description", "l70pds_global_com-user 4.4.2 KOT49I.D29510d D29510d.1423726485 release-keys");
-        property_set("ro.build.fingerprint", "lge/l70pds_global_com-user/l70pds:4.4.2/KOT49I.D29510d/D29510d.1423726485:user/release-keys");
+        property_set("ro.build.fingerprint", "lge/l70pds_global_com-user/l70pn:4.4.2/KOT49I.D29510d/D29510d.1423726485:user/release-keys");
                 property_set("persist.radio.multisim.config", "dsds");
         property_set("telephony.lteOnCdmaDevice", "0");
     } else {
         /* XXX */
         property_set("ro.product.device", "l70p");
-        property_set("ro.product.model", "Please write your model name to OnlyCM");
+        property_set("ro.product.model", "Please write your model name to Panos");
         property_set("persist.radio.multisim.config", "");
         property_set("telephony.lteOnCdmaDevice", "0");
     }
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
-    ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
+    INFO("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
 }
