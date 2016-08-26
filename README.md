@@ -1,4 +1,4 @@
-CyanogenMod 12.1 device configuration for LG L Fino l70pds (D295)
+CyanogenMod 13.0 device configuration for LG L Fino l70pds (D295)
 
 
 How to build:
@@ -10,7 +10,7 @@ Initializing a Build Environment:
 
 Initialize repo:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
+    repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
 
     curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/geekydoc/android_local_manifest/cm-13.0/local_manifest.xml
     
