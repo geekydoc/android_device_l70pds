@@ -5,6 +5,15 @@
 qemu.hw.mainkeys=0
 # Should be mtp only on public build. Adb only for debugging!
 persist.sys.usb.config=mtp
+#
+ro.sf.lcd_density=240
+
+telephony.lteOnGsmDevice=0
+ro.telephony.default_network=3
+persist.radio.multisim.config=dsds
+persist.multisim.config=dsds
+persist.radio.dont_use_dsd=true
+ro.telephony.ril.config=simactivation 
 
 # Fix camera white artifacts 
 av.offload.enable=false

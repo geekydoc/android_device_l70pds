@@ -26,14 +26,9 @@
 TARGET_KERNEL_CONFIG := l70pds_global_com_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/l70pds/mkbootimg.mk
 
-TARGET_LIBINIT_DEFINES_FILE := device/lge/l70pds/init/init_l70pds.c
-
 DEVICE_RESOLUTION := 480x800
 
-TARGET_OTA_ASSERT_DEVICE := l70pn,l70pds
-
-# Nfc
-BOARD_NFC_CHIPSET := pn547
+TARGET_OTA_ASSERT_DEVICE := l70pds
 
 #TWRP
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness

@@ -23,28 +23,9 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/l70pds/overlay
 
 PRODUCT_PACKAGES += Torch
 
-# NFC packages
-PRODUCT_PACKAGES += \
-    NfcNci \
-    Tag \
-    nfc_nci.pn54x.default \
-    com.android.nfc_extras
-
-NFCEE_ACCESS_PATH := device/lge/l70pds/prebuilt/etc/nfcee_access.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=240
-
 PRODUCT_COPY_FILES += \
     device/lge/l70pds/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/l70pds/prebuilt/etc/thermal-engine-8610.conf:system/etc/thermal-engine-8610.conf \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    device/lge/l70pds/prebuilt/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/lge/l70pds/prebuilt/etc/nfc-nci.conf:system/etc/nfc-nci.conf \
-    device/lge/l70pds/prebuilt/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
-    device/lge/l70pds/prebuilt/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
     device/lge/l70pds/fstab.msm8610:root/fstab.msm8610
 
 PRODUCT_LOCALES := en_US
