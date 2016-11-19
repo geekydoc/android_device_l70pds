@@ -15,8 +15,5 @@ persist.multisim.config=dsds
 persist.radio.dont_use_dsd=true
 ro.telephony.ril.config=simactivation 
 
-# Fix camera white artifacts 
-av.offload.enable=false
-av.streaming.offload.enable=false
-mm.enable.smoothstreaming=true
-camera2.portability.force_api=1
+#Set the device model
+ro.product.model=LG-D295
