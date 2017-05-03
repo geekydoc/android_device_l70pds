@@ -17,3 +17,5 @@ ro.telephony.ril.config=simactivation
 
 #Set the device model
 ro.product.model=LG-D295
+#Support TWRP
+ro.product.device=l70pds
