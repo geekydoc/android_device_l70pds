@@ -24,7 +24,6 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/l70pds/overlay
 PRODUCT_PACKAGES += Torch
 
 PRODUCT_COPY_FILES += \
-    device/lge/l70pds/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/l70pds/prebuilt/etc/thermal-engine-8610.conf:system/etc/thermal-engine-8610.conf \
     device/lge/l70pds/fstab.msm8610:root/fstab.msm8610
 
